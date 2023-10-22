@@ -1,13 +1,13 @@
-import NewEventForm from "../components/events/NewEventForm";
-import { useHistory } from "react-router-dom";
+import NewEventForm from "../components/upcomingEvents/NewEventForm";
+import { useNavigate } from "react-router-dom";
 
 function NewEventPage() {
-  const history = useHistory();
+  const history = useNavigate();
 
   function addEventHandler(eventData) {
     // Firebase Real-time Database API
     fetch(
-      "https://react-memory-app-f1cdb-default-rtdb.firebaseio.com/events.json",
+      process.env.REACT_APP_FIREBASE_API_KEY + "/events.json",
       {
         method: "POST",
         body: JSON.stringify(eventData), // convert js object to json
@@ -16,7 +16,7 @@ function NewEventPage() {
         },
       }
     ).then(() => {
-        history.replace('/')
+      history('/', { replace: true })
     }); // just js function
   }
 

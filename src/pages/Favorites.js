@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import FavoritesContext from "../statestore/favorites-context";
 
-import EventList from "../components/events/EventList";
+import EventList from "../components/upcomingEvents/EventList";
 
 function FavoritesPage() {
   const favoritesCxt = useContext(FavoritesContext);

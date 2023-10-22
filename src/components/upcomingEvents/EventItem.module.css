@@ -1,5 +1,6 @@
 .item {
-    margin: 1rem 0;
+    margin: 3rem 3rem;
+    display: inline-flex;
 }
 
 .image {

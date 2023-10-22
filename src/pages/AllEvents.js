@@ -1,23 +1,6 @@
-import EventList from "../components/events/EventList";
+import EventList from "../components/upcomingEvents/EventList";
 import { useState, useEffect } from "react";
 
-// const DUMMY_EVENTS = [
-//   {
-//     id: "e1",
-//     title: "CMU Career Fair",
-//     description: "CMU Career Fair 2023",
-//     location: "CMU",
-//     image: "https://live.staticflickr.com/589/32880578552_1eddf34d90_b.jpg",
-//   },
-//   {
-//     id: "e2",
-//     title: "Basketball Game",
-//     description: "2023, CMU basketball game",
-//     location: "at CMU",
-//     image:
-//       "https://athletics.cmu.edu/sports/mbkb/2022-23/photos/emory/cmuMBBvsEmory-Highlights-8.jpg",
-//   },
-// ];
 
 function AllEventsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,9 +10,10 @@ function AllEventsPage() {
   // Prevent the page from reloading
   useEffect(() => {
     console.log("Visit All Events Page, Now")
+
     setIsLoading(true);
     fetch(
-      "https://react-memory-app-f1cdb-default-rtdb.firebaseio.com/events.json"
+      process.env.REACT_APP_FIREBASE_API_KEY + "/events.json"
     )
       .then((response) => {
         return response.json();
@@ -44,7 +28,7 @@ function AllEventsPage() {
           };
           events.push(event);
         }
-        setLoadedEvents(events );
+        setLoadedEvents(events);
       });
   }, []); // second argument is dependency, should include all external values Effect relies on
 

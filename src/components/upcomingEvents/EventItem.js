@@ -30,6 +30,7 @@ function EventItem(props) {
 
   return (
     <li className={classes.item}>
+    
       <Card>
         <div className={classes.image}>
           <img src={props.image} alt={props.title} />
@@ -37,7 +38,7 @@ function EventItem(props) {
 
         <div className={classes.content}>
           <h3>{props.title}</h3>
-          <address>{props.location}</address>
+          <p>{props.location}</p>
           <p>{props.description}</p>
         </div>
 
@@ -47,6 +48,7 @@ function EventItem(props) {
           </button>
         </div>
       </Card>
+
     </li>
   );
 }

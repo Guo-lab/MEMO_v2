@@ -1,4 +1,4 @@
-.header {
+.header_dark {
     width: 100%;
     height: 5rem;
     display: flex;
@@ -7,13 +7,31 @@
     background-color: #77002e;
     padding: 0 10%;
 }
-  
+.header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #770077;
+    padding: 0 10%;
+}
+
+
+/* logo text */
 .logo {
     font-size: 2rem;
-    color: white;
+    color: #fcb8d2;
     font-weight: bold;
 }
-  
+.logo_dark {
+    font-size: 2rem;
+    color: #fcb8d2;
+    font-weight: bold;
+}
+
+
+/* light navbar */
 .header ul {
     list-style: none;
     margin: 0;
@@ -21,24 +39,90 @@
     display: flex;
     align-items: baseline;
 }
-  
 .header li {
     margin-left: 3rem;
 }
-  
 .header a {
     text-decoration: none;
     font-size: 1.5rem;
     color: #fcb8d2;
 }
-  
 .header a:hover,
-.header a:active,
 .header a.active {
     color: white;
 }
-  
+.actions {
+    margin-top: 0.3rem;
+    text-align: right;
+}
+.actions button {
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #cc60b2;
+    color: #fcb8d2;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+.actions button:hover,
+.actions button:active {
+    background-color: #cc20cc;
+    border-color: #cc60cc;
+    color: white;
+}
+
+
+/* dark mode for navbar */
+.header_dark ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+}
+.header_dark li {
+    margin-left: 3rem;
+}
+.header_dark a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fcb8d2;
+}
+.header_dark a:hover,
+.header_dark a.active {
+    color: white;
+}
+.actions_dark {
+    margin-top: 0.3rem;
+    text-align: right;
+}
+.actions_dark button {
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #bb005e;
+    color: #fcb8d2;
+    padding: 0.3rem 0.5rem;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+.actions_dark button:hover,
+.actions_dark button:active {
+    background-color: #a50e48;
+    border-color: #a50e48;
+    color: white;
+}
+
+
+/* badge for favorites future event */
 .badge {
+    background-color: #cc60b2;
+    color: white;
+    border-radius: 12px;
+    padding: 0 1rem;
+    margin-left: 0.5rem;
+}
+
+.badge_dark {
     background-color: #cc2062;
     color: white;
     border-radius: 12px;
